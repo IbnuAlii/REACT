@@ -15,7 +15,7 @@ public class TargetCalculator {
         String startDateStr = scanner.nextLine();
         System.out.print("Enter the end date (YYYY-MM-DD): ");
         String endDateStr = scanner.nextLine();
-        System.out.print("Enter the total annual target: ");
+        System.out.print("Enter the total annual target: $");
         double totalAnnualTarget = scanner.nextDouble();
 
         LocalDate startDate = LocalDate.parse(startDateStr);
@@ -44,9 +44,9 @@ public class TargetCalculator {
         double dailyTarget = monthlyTargets/daysExcludingFridays; // 2024 is a leap year, so we might use 366
         double totalTarget = dailyTarget * workingDaysInRange;
 
-        System.out.println("Days Excluding Fridays: " + daysExcludingFridays);
-        System.out.println("Days Worked Excluding Fridays: " + workingDaysInRange);
-        System.out.println("Monthly Targets: " + "$" + monthlyTargets);
+        System.out.println("Days Excluding Fridays: " + "[" + daysExcludingFridays + "]");
+        System.out.println("Days Worked Excluding Fridays: " + "[" + workingDaysInRange + "]");
+        System.out.println("Monthly Targets: " + "$" + "[" + monthlyTargets + "]");
         System.out.println("Total Target: " + "$" + totalTarget);
 
         scanner.close();
